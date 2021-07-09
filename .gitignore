@@ -1,0 +1,7 @@
+**/CMakeCache.txt
+**/CMakeFiles
+**/Makefile
+**/build
+cmake_install.cmake
+libsocketcan_wrapper.a
+socketcan_wrapper_test

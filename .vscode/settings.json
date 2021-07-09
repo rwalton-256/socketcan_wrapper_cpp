@@ -1,0 +1,21 @@
+{
+    "C_Cpp.default.includePath": [
+        "include/socketcan_wrapper"
+    ],
+    "files.exclude": {
+        "cmake_install.cmake": true,
+        "CMakeCache.txt":true,
+        "*.a":true,
+        "**/CMakeFiles":true,
+        "**/build":true,
+        "socketcan_wrapper_test":true,
+        "**/Makefile":true
+    },
+    "files.associations": {
+        "string": "cpp",
+        "cstring": "cpp",
+        "thread": "cpp",
+        "queue": "cpp",
+        "deque": "cpp"
+    }
+}
