@@ -7,6 +7,7 @@
 
 int main ( int argc, char** argv )
 {
+    // Need to initialize this virtual can port before it works
     SocketCAN_Wrapper a( "vcan0" ), b( "vcan0" );
 
     can_frame bar, foo =

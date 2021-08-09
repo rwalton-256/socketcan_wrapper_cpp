@@ -10,6 +10,12 @@
 
 #include <socketcan_wrapper/socketcan_wrapper.hpp>
 
+/**
+ * @brief Construct a new SocketCAN_Wrapper::SocketCAN_Wrapper object
+ * 
+ * @param _aIfaceName Name of can interface desired (ex: can0)
+ * @param _mTimeoutSec Timeout (in seconds) desired for send and receive operations
+ */
 SocketCAN_Wrapper::SocketCAN_Wrapper( const std::string& _aIfaceName, float _mTimeoutSec )
 {
     _mSocket = ::socket( PF_CAN, SOCK_RAW, CAN_RAW );
@@ -39,12 +45,22 @@ SocketCAN_Wrapper::SocketCAN_Wrapper( const std::string& _aIfaceName, float _mTi
     }
 }
 
+/**
+ * @brief Sends can frame over socketCAN
+ * 
+ * @param _aFrame 
+ */
 void SocketCAN_Wrapper::send_frame( const can_frame& _aFrame )
 {
     int nbytes;
     nbytes = write( _mSocket, &_aFrame, sizeof(can_frame) );
 }
 
+/**
+ * @brief Receives can frame from socketCAN
+ * 
+ * @param _aFrame 
+ */
 void SocketCAN_Wrapper::receive_frame( can_frame& _aFrame )
 {
     int nbytes;
