@@ -13,4 +13,5 @@ std::ostream& operator<<( std::ostream& os, const can_frame& frame )
         os << " " << std::hex << std::setfill( '0' ) << std::setw( 2 ) << +frame.data[i];
     }
     os << std::endl;
+    return os;
 }
