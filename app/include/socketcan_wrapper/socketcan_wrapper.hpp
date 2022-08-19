@@ -22,7 +22,7 @@ public:
         std::string _mWhat;
     public:
         Initialization_Error( const std::string& _aWhat ) : _mWhat( _aWhat ) {}
-        const char* what() const _GLIBCXX_TXN_SAFE_DYN _GLIBCXX_NOTHROW
+        const char* what() const _GLIBCXX_USE_NOEXCEPT
         {
             return _mWhat.c_str();
         }
